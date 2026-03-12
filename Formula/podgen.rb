@@ -11,7 +11,7 @@ class Podgen < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_darwin_amd64.tar.gz"
-      sha256 "641fd5a4ead900184db96d60b528c32ab341e61a61a18c2a0809ee0c65a0e77e"
+      sha256 "f509d66252911f7dffdfb50b24ace047c7731caa840106d463cea5dc8926ca27"
 
       def install
         bin.install "podgen"
@@ -19,7 +19,7 @@ class Podgen < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_darwin_arm64.tar.gz"
-      sha256 "b4018e579659280f3904d937a8016c7337decfda710c93fa6083421e7b33902f"
+      sha256 "1bcbfc08d2d5bda0bfd166c03ccf3a5eb3d3271d873fb7c5923b7ad68000db9a"
 
       def install
         bin.install "podgen"
@@ -30,14 +30,14 @@ class Podgen < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_linux_amd64.tar.gz"
-      sha256 "cb1b0f24a7219657f29d526b88bf10e37dc38ef726445ca6833370cbb3d53e6e"
+      sha256 "3aace6c9fda9e7574a994a8f8184bdd9f4a18216c38f798919fe1ce21a1c1dd4"
       def install
         bin.install "podgen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_linux_arm64.tar.gz"
-      sha256 "4c9036ded0bf03022ed3621a07e66dfd46682fc76ecd04171664defef02c8b99"
+      sha256 "3b2b909656de4b28c1ab203e3fdd89087d972650b4faa95b2b49279a53a0ea5d"
       def install
         bin.install "podgen"
       end
