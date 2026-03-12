@@ -5,21 +5,21 @@
 class Podgen < Formula
   desc "Upload MP3 episodes to S3 and generate RSS feeds for podcast players"
   homepage "https://github.com/ohmylock/podgen"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohmylock/podgen/releases/download/v0.1.0/podgen_0.1.0_darwin_amd64.tar.gz"
-      sha256 "15f9bf65e4d7520b1bcb04d0258a66def5cc8d284ee6059e35495d8a2c080116"
+      url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_darwin_amd64.tar.gz"
+      sha256 "1575d9f9af8084272b7826adf4d507da6a5a5459976b4f6e0f7c05313460151a"
 
       def install
         bin.install "podgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohmylock/podgen/releases/download/v0.1.0/podgen_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4d382ee6e1c549e472fcb6904ece8a5db64d9e6634b1ebf91af8899817a5d9c6"
+      url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_darwin_arm64.tar.gz"
+      sha256 "53187e5b2b51a0e47a8757a4af1a6ce74892eb6dd22af27b4613b417593297ae"
 
       def install
         bin.install "podgen"
@@ -29,15 +29,15 @@ class Podgen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohmylock/podgen/releases/download/v0.1.0/podgen_0.1.0_linux_amd64.tar.gz"
-      sha256 "f5ea006115d0498aeb631312db5c214f6127d9166b0586f3f65e878f14e34093"
+      url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_linux_amd64.tar.gz"
+      sha256 "a842a542891d688177a1387432b835fa8e944e0cb2e4c3535efbc6252838c634"
       def install
         bin.install "podgen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohmylock/podgen/releases/download/v0.1.0/podgen_0.1.0_linux_arm64.tar.gz"
-      sha256 "fab9ae06510f3c7e21e094cecda87e03bb04099a11eb6bd91c8eed9b64701c82"
+      url "https://github.com/ohmylock/podgen/releases/download/v0.1.1/podgen_0.1.1_linux_arm64.tar.gz"
+      sha256 "e673f589fe6aa1d021ce9be7ba0597af2634585f22e7b75586bf6302476fd0b9"
       def install
         bin.install "podgen"
       end
