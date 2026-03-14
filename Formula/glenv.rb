@@ -5,21 +5,21 @@
 class Glenv < Formula
   desc "Sync .env files to GitLab CI/CD variables — bulk import, export, and manage environment variables via CLI"
   homepage "https://github.com/ohmylock/glenv"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohmylock/glenv/releases/download/v0.1.0/glenv_0.1.0_darwin_amd64.tar.gz"
-      sha256 "d2ed02746d9b8eb640cd6b6c3243f8ff6092f192f43773f4f86e625a79e6c454"
+      url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_darwin_amd64.tar.gz"
+      sha256 "758756feab2ae4112f2c898665c32a1f9b53b04b689bafcb8ea9d28607ad1eb9"
 
       define_method(:install) do
         bin.install "glenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohmylock/glenv/releases/download/v0.1.0/glenv_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4081167ef80706675bb00a95d4d3c412dc88a11d55046815b7773b270bb9c770"
+      url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_darwin_arm64.tar.gz"
+      sha256 "ea86cf3daa1f9134214186fdbc935038146e69c909a0014377baa7fa424479cf"
 
       define_method(:install) do
         bin.install "glenv"
@@ -29,15 +29,15 @@ class Glenv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohmylock/glenv/releases/download/v0.1.0/glenv_0.1.0_linux_amd64.tar.gz"
-      sha256 "8ddb724bff8396f124685f422f343cb3b0698df49bb0fa109c1d90218cd951e4"
+      url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_linux_amd64.tar.gz"
+      sha256 "6931caeec9d3e0b7995ba9168cc1477ffcfb57acd4a0f23944bd7dbdf5a15635"
       define_method(:install) do
         bin.install "glenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohmylock/glenv/releases/download/v0.1.0/glenv_0.1.0_linux_arm64.tar.gz"
-      sha256 "f3d3402f0537c8c5a4acc6f97e5e8062824600c43cb2742e5bf7ec729583db7a"
+      url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_linux_arm64.tar.gz"
+      sha256 "f787c673c667e3518225c335b6194ac53ffaf30e4acc7c9ff55596f8211e51ab"
       define_method(:install) do
         bin.install "glenv"
       end
