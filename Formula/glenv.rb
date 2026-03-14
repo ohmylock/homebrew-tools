@@ -11,17 +11,17 @@ class Glenv < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_darwin_amd64.tar.gz"
-      sha256 "758756feab2ae4112f2c898665c32a1f9b53b04b689bafcb8ea9d28607ad1eb9"
+      sha256 "f759cebbb700de07c4f8ba7b53728881e9bfee1140c86206073b9df7073471ce"
 
-      define_method(:install) do
+      def install
         bin.install "glenv"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_darwin_arm64.tar.gz"
-      sha256 "ea86cf3daa1f9134214186fdbc935038146e69c909a0014377baa7fa424479cf"
+      sha256 "80b5ee40db6d783295251fe8ebf4d07a370cffd4f468aca26f4d8f2160d6a5c1"
 
-      define_method(:install) do
+      def install
         bin.install "glenv"
       end
     end
@@ -30,15 +30,15 @@ class Glenv < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_linux_amd64.tar.gz"
-      sha256 "6931caeec9d3e0b7995ba9168cc1477ffcfb57acd4a0f23944bd7dbdf5a15635"
-      define_method(:install) do
+      sha256 "786db5e5d6fcf150883031ba4b6be33e123c11d552277a85bab558cc16d8b5a5"
+      def install
         bin.install "glenv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohmylock/glenv/releases/download/v0.1.1/glenv_0.1.1_linux_arm64.tar.gz"
-      sha256 "f787c673c667e3518225c335b6194ac53ffaf30e4acc7c9ff55596f8211e51ab"
-      define_method(:install) do
+      sha256 "634e500601f9ed34f3dc38b315946bc1d7ff19fab11d88d97173b7bbff3f0db9"
+      def install
         bin.install "glenv"
       end
     end
